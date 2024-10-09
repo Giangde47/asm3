@@ -1,0 +1,309 @@
+:root {
+  --color-primary: rgb(42, 129, 235);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+#skill .section-content,
+#language .section-content,
+#experience .section-content,
+#activity .section-content,
+#education .section-content,
+#hobby .section-content {
+  display: none;
+}
+a {
+  text-decoration: none;
+}
+.view-more {
+  display: none;
+}
+#error-email {
+  color: orange;
+  font-weight: 200;
+}
+.exp-bar {
+  width: 50px;
+  height: 4px;
+  background-color: gray;
+  display: inline-block;
+}
+.fill {
+  background-color: var(--color-primary);
+}
+.section-content {
+  margin-left: 10px;
+}
+.timeline .section-content {
+  position: relative;
+  padding-left: 15px;
+}
+.title1::after {
+  content: "\2022";
+  position: absolute;
+  color: var(--color-primary);
+  font-size: 1.5em;
+  top: -5px;
+  left: 5px;
+}
+
+/* header */
+#header {
+  position: relative;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.65)),
+    url("/images/banner.jpg");
+  background-size: cover;
+}
+
+#header img {
+  height: 100vh;
+}
+.intro-text {
+  position: absolute;
+  color: #f7f7f7;
+  transform: translate(-50%, 0);
+  text-align: center;
+  left: 50%;
+  top: 15%;
+}
+#header .header-name {
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+#header .header-subname {
+  text-align: center;
+  font-size: 16px;
+  color: #ffffff;
+  opacity: 0.6;
+}
+
+/* navbar */
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  height: 70px;
+}
+nav > * {
+  flex: 1;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+nav > *:hover {
+  background-color: aquamarine;
+  color: #fff;
+  cursor: pointer;
+}
+.item .nav-band {
+  flex-basis: 300px;
+  padding-top: 10px;
+}
+.item {
+  flex-basis: 100px;
+}
+
+.section-title i {
+  font-size: 40px;
+  color: #3b3b3b;
+}
+.icon i {
+  font-size: 16px;
+  width: 36px;
+  height: 36px;
+  padding-top: 10px;
+  padding-left: 10px;
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+}
+.nav-band {
+  position: relative;
+}
+.change-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgb(254, 253, 253);
+  position: absolute;
+  top: -15px;
+  left: 90px;
+}
+/* Xay dung thong tin ca nhan */
+.info-target {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  margin: 0 auto;
+  background-color: #ddd;
+  justify-items: center;
+}
+.info-target > div {
+  margin-bottom: 40px;
+  margin: 10px;
+}
+.info-target > p {
+  line-height: 1.6;
+  text-decoration: none;
+}
+.section-title {
+  font-size: 30px;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  justify-content: space-between;
+  margin: 20px 10px;
+}
+.section-content .title {
+  font-weight: bold;
+}
+
+#info .section-content {
+  display: none;
+}
+
+.social-icons {
+  margin-right: 15px;
+  margin-top: 20px;
+  height: 24px;
+  width: 24px;
+}
+
+/* Thong tin ca nhan */
+.focus {
+  display: grid;
+  grid-template-columns: 450px 450px 450px;
+  row-gap: 40px;
+  column-gap: 40px;
+}
+.focus > div {
+  border: 2px solid #ddd;
+  margin: 10px;
+}
+.icon {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.section-content {
+  grid-column: 1/-1;
+  margin: 20px;
+}
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 12px;
+}
+/* Chứng chỉ */
+#certificate .section-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+.card {
+  display: flex;
+  gap: 20px;
+  border: none;
+}
+.card:first-child {
+  border-right: 2px solid #d6c08d;
+}
+.card:last-child {
+  grid-column: 1/-1;
+  padding-top: 50px;
+  border-top: 2px solid #d6c08d;
+}
+/* Dự án */
+
+#project .section-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+}
+#project .project-card {
+  flex-direction: column;
+}
+#project img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.project-title {
+  height: 75px;
+  font-size: 17px;
+  padding: 20px 5px;
+  margin-bottom: -8px;
+  font-weight: bold;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+.pj-title {
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+.sub-title {
+  width: 100%;
+  font-size: 16px;
+}
+.card .content > div {
+  display: flex;
+}
+.card .content > div {
+  display: flex;
+  gap: 5px;
+}
+table {
+  border-collapse: collapse;
+}
+td {
+  padding: 10px;
+}
+tr td:first-child {
+  width: 100px;
+  vertical-align: top;
+  font-weight: bold;
+}
+tr {
+  border: 1px solid #ccc;
+}
+
+/*Footer*/
+footer {
+  text-align: center;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+footer a:link,
+a:visited {
+  color: #3b3b3b;
+  font-size: 24px;
+  display: inline-block;
+  padding-left: 50px;
+  margin-right: 50px;
+}
+footer a:hover,
+a:active {
+  cursor: pointer;
+  color: var(--color-primary);
+}
+footer i {
+  color: var(--color-primary);
+}
+
